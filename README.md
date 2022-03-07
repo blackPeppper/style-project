@@ -1,4 +1,4 @@
-# fully funtion javascript website
+# fully function javascript website
 
 ## project technology
 
