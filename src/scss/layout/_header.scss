@@ -1,0 +1,47 @@
+header {
+    position: fixed;
+    top: 100vh;
+    background-color: white;
+    width: 550px;
+    z-index: 2000;
+    min-height: 100vh;
+    transition: all 0.4s cubic-bezier(.68,-0.55,.27,1.55);
+    font-size: 60px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    nav {
+        .bar {
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            top: -45px;
+            left: 1150px;
+            position: absolute;
+            border-radius: 10%;
+            cursor: pointer;
+            background-color: var(--main-color);
+            filter: brightness(1.1);
+            font-size: 40px;
+            color: white;
+            border: solid black;
+        }
+        
+        .links {
+            li {
+                a {
+                    text-decoration: none;
+                    color: var(--main-color);
+                    &:hover {
+                        filter: brightness(1.5);
+                        font-size: 65px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.show {
+    top: 0vh;
+}

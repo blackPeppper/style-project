@@ -1,0 +1,116 @@
+// Start Settings Box
+.settings-box {
+    position: fixed;
+    left: -200px;
+    top: 0;
+    background-color: white;
+    width: 200px;
+    z-index: 1000;
+    min-height: 100vh;
+    transition: all 0.4s cubic-bezier(.68,-0.55,.27,1.55);
+    .settings-container {
+        .options-box {
+            padding: 10px;
+            text-align: center;
+            background-color: #eee;
+            margin: 5px;
+            min-height: 90px;
+            span.active {
+                opacity: 1;
+                border: 2px solid #fff;
+                transform: scale(1.1);
+            }
+            .yes,
+            .no {
+                @extend %button;
+                background-color: var(--main-color);
+                color: #fff;
+            }
+
+            h4 {
+                margin: 0;
+                color: #666;
+                font-size: 14px;
+            }
+
+            .colors-list {
+                list-style: none;
+                text-align: center;
+                padding: 0;
+                margin: 16px 0 0;
+
+                li {
+                    @include circle(22px);
+                    background-color: var(--main-color);
+                    cursor: pointer;
+                    opacity: 0.5;
+                    display: inline-block;
+                }
+
+                li.active {
+                    opacity: 1;
+                    border: 2px solid #fff;
+                    transform: scale(1.2);
+                }
+
+                li:first-child {
+                    background-color: $blue-500;
+                }
+
+                li:nth-child(2) {
+                    background-color: $red-500;
+                }
+
+                li:nth-child(3) {
+                    background-color: $yellow-400;
+                }
+
+                li:nth-child(4) {
+                    background-color: $orange-500;
+                }
+
+                li:nth-child(5) {
+                    background-color: $purple-600;
+                }
+            }
+        }
+        .reset-options {
+            background-color: $red-600;
+            border: none;
+            width: 178px;
+            margin: 10px auto;
+            display: block;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            outline: none;
+            opacity: 0.8;
+            &:hover {
+                opacity: 1;
+            }
+            &:active {
+                box-shadow: -1px 11px 20px -14px rgba(0, 0, 0, 0.7);
+            }
+        }
+    }
+    .toggle-settings {
+        position: absolute;
+        right: -30px;
+        top: 137px;
+        background-color: #fff;
+        text-align: center;
+        cursor: pointer;
+        .fa-gear {
+            color: var(--main-color);
+            padding: 8px 0;
+            width: 30px;
+        }
+    }
+}
+
+.open {
+    left: 0px;
+}
+// end Settings Box

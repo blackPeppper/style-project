@@ -1,0 +1,54 @@
+@import "./helpers/mixins";
+
+.container {
+    width: 1280px;
+    margin: auto;
+    padding: 0px 15px;
+    @include for-phone {
+        max-width: 540px;
+    }
+
+    @include for-tablet {
+        max-width: 720px;
+    }
+
+    @include for-desktop {
+        max-width: 960px;
+    }
+
+    @include for-desktop-large {
+        max-width: 1140px;
+    }
+}
+
+
+.clearfix {
+    clear: both;
+}
+
+
+@include for-media-max(767px) {
+        h1 {
+            font-size: 26px;
+        }
+
+    .about-us {
+        display: block;
+        text-align: center;
+
+        .info-box {
+            padding: 0;
+        }
+    }
+
+    .skills {
+        .skill-box {
+            display: block;
+
+            .skill-name {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

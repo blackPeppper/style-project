@@ -1,0 +1,239 @@
+doctype html
+html(lang="en")
+    head
+        include include/_meta.pug
+        include include/_style.pug
+        title js web
+    body
+
+        // start settings box
+        .settings-box
+            .toggle-settings
+                i.fa.fa-gear.fa-spin
+            .settings-container
+                .options-box
+                    h4 Colors
+                    ul.colors-list
+                        li(data-color="#3B82F6").active
+                        li(data-color="#EF4444")
+                        li(data-color="#FBBF24")
+                        li(data-color="#F97316")
+                        li(data-color="#7C3AED")
+                .options-box
+                    h4 Random Background
+                    .random-background
+                        span.yes(data-background="yes").active Yes
+                        span.no(data-background="no") No
+                .options-box
+                    h4 Show Bullets
+                    .bullets-option
+                        span.yes(data-display="show").active Yes
+                        span.no(data-display="hide") No
+                button.reset-options Reset Options
+        // end settings box
+
+
+        // start navbar box
+        header.header
+            nav
+                .bar ^
+
+                ul.links
+                    li
+                        a(href='#' data-section='.about-us') About
+                    li
+                        a(href='#' data-section='.skills') Skills
+                    li
+                        a(href='#' data-section='.gallery') Gallery
+                    li
+                        a(href='#' data-section='.timeline') Timeline
+                    li
+                        a(href='#' data-section='.features') Features
+                    li
+                        a(href='#' data-section='.testimonials') Testimonials
+        // end settings box
+
+        // Start Navigation Bullets
+        .nav-bullets
+            .bullets(data-section=".about-us")
+                .tooltip About Us
+            .bullets(data-section=".skills")
+                .tooltip Our Skills
+            .bullets(data-section=".gallery")
+                .tooltip Our Gallery
+            .bullets(data-section=".timeline")
+                .tooltip Time Line
+            .bullets(data-section=".features")
+                .tooltip Oue Features
+            .bullets(data-section=".testimonials")
+                .tooltip Testimonials
+        // End Navigation Bullets
+
+        // start landing page
+        .landing-page
+            .overlay
+            .container
+            .introduction-text
+                h1 We Are
+                    span  Creative Agency
+                p  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        // end landing page
+
+
+        // Start About us
+        .container
+            .about-us
+                .info-box
+                    h2 About
+                        span Us
+                    p We are a big company,Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                .img-box
+                    include components/about.pug
+                    //- img(src="img/about-us.jpg", alt="", srcset="")
+        // end About us
+
+        // Start Our Skills
+
+        .skills
+            .container
+                h2 Our Skills
+                .skill-box
+                    .skill-name HTML
+                    .skill-progress
+                        span(data-progress='80%')
+                .skill-box
+                    .skill-name CSS
+                    .skill-progress
+                        span(data-progress='70%')
+                .skill-box
+                    .skill-name JavaScript
+                    .skill-progress
+                        span(data-progress='90%')
+                .skill-box
+                    .skill-name Python
+                    .skill-progress
+                        span(data-progress='80%')
+                .skill-box
+                    .skill-name PHP
+                    .skill-progress
+                        span(data-progress='90%')
+                .skill-box
+                    .skill-name MySQL
+                    .skill-progress
+                        span(data-progress='70%')
+        // end Our Skills
+
+        // Start Our Gallery
+
+        .gallery
+            .container
+                h2 Our Gallery
+                .img-box
+                    img(src="img/website1.jpg", alt="this website for business company")   
+                    img(src="img/website2.jpg", alt="this website for mobile shop")
+                    img(src="img/website3.jpg", alt="this website for digtal marketing company")
+                    img(src="img/website4.jpg", alt="this website for ohter digtal marketing company")
+                    img(src="img/website1.jpg", alt="this website for business company")   
+                    img(src="img/website2.jpg", alt="this website for mobile shop")
+                    img(src="img/website3.jpg", alt="this website for digtal marketing company")
+                    img(src="img/website4.jpg", alt="this website for ohter digtal marketing company")
+                    img(src="img/website3.jpg", alt="this website for digtal marketing company")
+                    img(src="img/website4.jpg", alt="this website for ohter digtal marketing company")
+
+        // end Our Gallery
+
+        // Start TimeLine
+
+        .timeline
+            .container
+                .timeline-content
+                    .year 2018
+
+                    .left
+                        .content
+                            h3 Testing Heading
+                            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna , we will do anything you imagine in no time
+                    .clearfix 
+                    .year 2017
+                    .right
+                        .content
+                            h3 Testing Heading
+                            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna , we will do anything you imagine in no time
+                    .clearfix
+                    .year 2016
+
+                    .left
+                        .content
+                            h3 Testing Heading
+                            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna , we will do anything you imagine in no time
+                    .clearfix 
+                    .right
+                        .content
+                            h3 Testing Heading
+                            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna , we will do anything you imagine in no time 
+
+        // End TimeLine
+
+        // Strat Our features
+
+        .features
+            h2 Our Features
+            .container
+                .feat-box
+                    img(src="img/icons/icon_01.png", alt="")
+                    h4 Development
+                    p We Are professional marketeers, we will do anything you imagine in no time, we will do anything you imagine in no time
+                .feat-box
+                    img(src="img/icons/icon_02.png", alt="")
+                    h4 Development
+                    p We Are professional marketeers, we will do anything you imagine in no time, we will do anything you imagine in no time
+                .feat-box
+                    img(src="img/icons/icon_03.png", alt="")
+                    h4 Development
+                    p We Are professional marketeers, we will do anything you imagine in no time, we will do anything you imagine in no time
+                .feat-box
+                    img(src="img/icons/icon_04.png", alt="")
+                    h4 Development
+                    p We Are professional marketeers, we will do anything you imagine in no time, we will do anything you imagine in no time
+                .feat-box
+                    img(src="img/icons/icon_05.png", alt="")
+                    h4 Development
+                    p We Are professional marketeers, we will do anything you imagine in no time, we will do anything you imagine in no time
+                .feat-box
+                    img(src="img/icons/icon_06.png", alt="")
+                    h4 Development
+                    p We Are professional marketeers, we will do anything you imagine in no time, we will do anything you imagine in no time
+                .clearfix
+        // End Our features
+
+        // Start Testimonials
+        .testimonials
+            h2 Testimonials
+            .flex-container
+                .slider-container
+                    .image
+
+                    .navigation
+                        img(src="img/svg/icon-prev.svg", alt="").prev
+                        img(src="img/svg/icon-next.svg", alt="").next
+                .feedback
+        // End Testimonials
+
+        //  Start Contact us
+
+        .contact
+            .overlay
+            .container
+                h2 Contact Us
+                form
+                    .left
+                        input(name="Your Name", type="text", placeholder="username")
+                        input(name="Your Phone", type="text", placeholder="phone")
+                        input(name="Ypur Email", type="email", placeholder="email")
+                        input(name="Subject", type="text", placeholder="subject")
+                    .right
+                        textarea(name="message", placeholder="Your Message")
+                        input(type="submit", value="Send")
+        // End Contact us
+        // link javascript
+        include include/_script.pug

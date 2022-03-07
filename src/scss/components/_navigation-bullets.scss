@@ -1,0 +1,39 @@
+// Start navigation-bullets
+.nav-bullets {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    z-index: 1000;
+    .bullets {
+        width: 15px;
+        height: 15px;
+        border: 1px solid var(--main-color);
+        border-radius: 50%;
+        margin: 20px 0;
+        background-color: #fff;
+        cursor: pointer;
+        position: relative;
+        &:hover {
+            transform: scale(1.2);
+            .tooltip {
+                display: block;
+            }
+        }
+        .tooltip {
+            background-color: var(--main-color);
+            width: 140px;
+            color: #fff;
+            padding: 6px 10px;
+            position: absolute;
+            right: 32px;
+            top: -5px;
+            text-align: center;
+            cursor: default;
+            pointer-events: none;
+            display: none;
+        }
+    }
+}
+// End navigation-bullets
